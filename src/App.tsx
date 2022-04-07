@@ -1,12 +1,24 @@
+import React from 'react';
+import {Routes, Route, Navigate} from 'react-router-dom';
+
 import './App.css';
 
-function App() {
+import Layout from './Components/Layout/Layout';
 
+import Main from './Components/pages/Main/Main';
+import About from './Components/pages/About/About';
+
+const App = () => {
   console.log(0)
-
-  return (
-    <div className="App">Hello</div>
-  );
+  return(
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Main />} />
+          <Route path='about' element={<About />} />
+          <Route path='*' element={<Navigate to="/" />} />
+        </Route>
+      </Routes>
+  )
 }
 
 export default App;
