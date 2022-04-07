@@ -2,7 +2,7 @@ import './App.css';
 
 function App() {
 
-  console.log(process.env)
+  console.log(0)
 
   return (
     <div className="App">Hello</div>
